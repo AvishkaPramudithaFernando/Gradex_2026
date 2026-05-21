@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive research artefact for a simulator-based hybrid quantum-classical medical AI prototype for diabetic foot ulcer image classification.">
+  <meta name="author" content="Avishka Fernando">
+  <meta name="theme-color" content="#07172d">
+  <meta property="og:title" content="Hybrid Quantum-Classical Deep Learning for Diabetic Foot Ulcer Classification">
+  <meta property="og:description" content="Premium interactive research demo for simulator-based hybrid quantum-classical medical AI evaluation.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/social-preview.svg">
+  <title>Hybrid Quantum-Classical Deep Learning for Diabetic Foot Ulcer Classification</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <button class="back-home" id="backHome" type="button" hidden>Back Home</button>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#hero" aria-label="Project home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-logo" data-logo="assets/staffordshire-university-london-logo.png">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Staffordshire University London" width="210" height="58">
+          <span>Staffordshire University London</span>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="#problem-gap">Problem</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#results">Results</a>
+        <a href="#insight">Insight</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#responsible">Claims</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="presentation-btn" id="presentationBtn" type="button">Demo Mode</button>
+    </nav>
+  </header>
+
+  <aside class="identity-block" aria-label="Project identity">
+    <button class="identity-toggle" id="identityToggle" type="button" aria-expanded="false">Project Details</button>
+    <div class="identity-card" id="identityCard">
+      <div class="institution-lockup compact-lockup" data-logo="assets/staffordshire-university-london-logo.png">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Staffordshire University London" width="238" height="70">
+        <span>Staffordshire University London</span>
+      </div>
+      <p><strong>Avishka Pramuditha Warnakulasuriya Fernando</strong></p>
+      <p>Student ID: 24022401</p>
+      <p><a href="mailto:w022401o@student.staffs.ac.uk">w022401o@student.staffs.ac.uk</a></p>
+      <p><a href="https://www.linkedin.com/in/avishka-pramuditha-warnakulasuriya-fernando-122b38282" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
+      <p>First Supervisor: Dr. Mahsa Zolfaghari</p>
+      <p>Second Supervisor: Dr. Khalil Saadat</p>
+    </div>
+  </aside>
+
+  <section class="demo-overlay" id="demoOverlay" aria-live="polite" aria-label="Cinematic process demo" hidden>
+    <div class="demo-panel">
+      <p class="eyebrow">3D Process Demo</p>
+      <h2 id="demoTitle">Hybrid quantum-classical pipeline</h2>
+      <p id="demoCaption">The guided demo highlights the workflow from image patch to reliability insight.</p>
+      <div class="demo-progress" aria-hidden="true"><span id="demoProgress"></span></div>
+      <div class="demo-controls">
+        <button type="button" id="pauseDemo">Pause</button>
+        <button type="button" id="resumeDemo">Resume</button>
+        <button type="button" id="restartDemo">Restart</button>
+        <button type="button" id="exitDemo">Exit / Back Home</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="hero section" id="hero">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Hybrid Quantum-Classical Medical AI</p>
+          <h1>
+            Hybrid Quantum-Classical<br>
+            Deep Learning for<br>
+            <span>Diabetic Foot Ulcer</span><br>
+            Classification
+          </h1>
+          <p class="hero-subtitle">A simulator-based research prototype combining CNN feature extraction and variational quantum circuits for binary diabetic foot ulcer image classification.</p>
+          <div class="hero-signature" aria-label="Researcher"><span>Researcher</span><strong>Avishka Fernando</strong></div>
+          <div class="hero-identity" aria-label="Academic identity">
+            <p><strong>Avishka Pramuditha Warnakulasuriya Fernando</strong> · 24022401</p>
+            <p><a href="mailto:w022401o@student.staffs.ac.uk">w022401o@student.staffs.ac.uk</a></p>
+            <p>Supervisor: Dr. Mahsa Zolfaghari · Co-Supervisor: Dr. Khalil Saadat</p>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-action" href="#pipeline">Start Demo</a>
+            <button class="secondary-action" id="watchDemo" type="button">Watch 3D Process</button>
+            <button class="secondary-action" id="openLabView" type="button">Open Full Lab View</button>
+            <a class="secondary-action" href="#gallery">View Gallery</a>
+          </div>
+        </div>
+        <div class="hero-stage reveal" aria-label="Quantum Medical AI Lab visual">
+          <div class="lab-dashboard">
+            <div class="lab-topline">
+              <span>Quantum Medical AI Lab</span>
+              <strong>Simulator-Based Research Prototype</strong>
+            </div>
+            <div class="lab-flow" aria-hidden="true">
+              <div class="lab-node dfu-node">
+                <i></i>
+                <b>DFU Image</b>
+              </div>
+              <div class="flow-link"></div>
+              <div class="lab-node cnn-node">
+                <span></span><span></span><span></span>
+                <b>ResNet</b>
+              </div>
+              <div class="flow-link"></div>
+              <div class="lab-node circuit-node">
+                <svg viewBox="0 0 180 100" role="img" aria-label="Four-qubit quantum circuit">
+                  <g class="hero-wires">
+                    <line x1="10" y1="18" x2="170" y2="18"></line><line x1="10" y1="40" x2="170" y2="40"></line><line x1="10" y1="62" x2="170" y2="62"></line><line x1="10" y1="84" x2="170" y2="84"></line>
+                  </g>
+                  <g class="hero-gates">
+                    <rect x="30" y="7" width="26" height="22"></rect><rect x="30" y="29" width="26" height="22"></rect><rect x="30" y="51" width="26" height="22"></rect><rect x="30" y="73" width="26" height="22"></rect>
+                    <circle cx="86" cy="18" r="5"></circle><line x1="86" y1="18" x2="86" y2="40"></line><circle cx="86" cy="40" r="9"></circle>
+                    <circle cx="122" cy="62" r="5"></circle><line x1="122" y1="62" x2="122" y2="84"></line><circle cx="122" cy="84" r="9"></circle>
+                    <rect x="145" y="7" width="20" height="22"></rect><rect x="145" y="29" width="20" height="22"></rect><rect x="145" y="51" width="20" height="22"></rect><rect x="145" y="73" width="20" height="22"></rect>
+                  </g>
+                </svg>
+                <b>4-Qubit VQC</b>
+              </div>
+              <div class="flow-link"></div>
+              <div class="lab-node prediction-node">
+                <span>Normal</span>
+                <span>Ulcer</span>
+                <b>Prediction</b>
+              </div>
+            </div>
+            <div class="lab-measurement">
+              <span>Pauli-Z Measurement</span>
+              <i></i>
+              <span>Normal / Ulcer Output</span>
+            </div>
+            <div class="lab-metrics" aria-label="Evaluation dashboard">
+              <span>Accuracy</span>
+              <span>F1-score</span>
+              <span>ROC-AUC</span>
+              <span>Confusion Matrix</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact-section quantum-core-section" id="quantum-core">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Quantum Medical Computing Core</p>
+        <h2>Hybrid Quantum Intelligence Engine</h2>
+      </div>
+      <div class="quantum-core-grid reveal">
+        <div class="quantum-canvas-shell">
+          <canvas id="quantumCoreCanvas" aria-label="3D quantum medical computing core visual"></canvas>
+        </div>
+        <div class="quantum-core-notes">
+          <article><h3>DFU Image Analysis</h3><p>Input patches are standardised and passed to the classical feature encoder.</p></article>
+          <article><h3>Feature Extraction</h3><p>ResNet-based embeddings are projected into a compact quantum-compatible vector.</p></article>
+          <article><h3>4-Qubit Circuit</h3><p>Angle embedding and variational rotations process encoded features in simulation.</p></article>
+          <article><h3>Medical AI Prediction</h3><p>Pauli-Z expectation values feed a classifier for Normal vs Ulcer output.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact-section" id="problem-gap">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Research Gap + Problem</p>
+        <h2>Responsible medical AI needs more than high headline accuracy.</h2>
+      </div>
+      <div class="gap-grid compact-cards">
+        <article class="glass-card reveal"><h3>Problem</h3><p>Diabetic foot ulcers are serious complications of diabetes. Early image-based classification can support timely assessment and treatment decisions.</p></article>
+        <article class="glass-card reveal"><h3>Research Gap</h3><p>Classical DFU deep learning studies show that CNNs can classify ulcer imagery, but they are mainly classical. Hybrid quantum machine learning evidence for DFU-specific medical imaging remains limited, and ideal quantum results can be misleading.</p></article>
+        <article class="glass-card reveal"><h3>Project Position</h3><p>This project connects diabetic foot ulcer classification, transfer learning, hybrid quantum-classical modelling, and multi-metric reliability evaluation.</p></article>
+      </div>
+    </section>
+
+    <section class="section compact-section" id="pipeline">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Interactive Pipeline</p>
+        <h2>DFU image patch to threshold-aware evaluation.</h2>
+      </div>
+      <div class="pipeline" id="pipelineSteps" aria-label="Interactive model pipeline">
+        <button data-detail="RGB image patch from dataset.">DFU Image</button>
+        <button data-detail="Resize to 224 × 224 and normalise.">Preprocessing</button>
+        <button data-detail="Classical CNN feature extraction.">ResNet18/ResNet50</button>
+        <button data-detail="Compress CNN features to a quantum-compatible vector.">Feature Projection</button>
+        <button data-detail="Map classical values to qubit rotations.">4-Qubit Angle Embedding</button>
+        <button data-detail="Trainable quantum transformation.">Variational Quantum Circuit</button>
+        <button data-detail="Pauli-Z expectation values.">Pauli-Z Measurement</button>
+        <button data-detail="Binary Normal vs Ulcer output.">Normal/Ulcer Prediction</button>
+        <button data-detail="Accuracy, precision, recall, F1-score, ROC-AUC and confusion matrix.">Evaluation</button>
+      </div>
+      <div class="pipeline-detail reveal" id="pipelineDetail">Hover or select a stage to inspect it.</div>
+      <div class="circuit-visual reveal" aria-label="Four qubit circuit visual">
+        <svg viewBox="0 0 980 250" role="img" aria-labelledby="circuitTitle">
+          <title id="circuitTitle">Four-qubit variational circuit with Pauli-Z measurements</title>
+          <g class="wire-group"><line x1="70" y1="48" x2="870" y2="48"></line><line x1="70" y1="98" x2="870" y2="98"></line><line x1="70" y1="148" x2="870" y2="148"></line><line x1="70" y1="198" x2="870" y2="198"></line></g>
+          <g class="qubit-labels"><text x="22" y="53">q0</text><text x="22" y="103">q1</text><text x="22" y="153">q2</text><text x="22" y="203">q3</text></g>
+          <g class="gate-group">
+            <rect x="115" y="26" width="58" height="42"></rect><text x="128" y="53">RY</text><rect x="115" y="76" width="58" height="42"></rect><text x="128" y="103">RY</text><rect x="115" y="126" width="58" height="42"></rect><text x="128" y="153">RY</text><rect x="115" y="176" width="58" height="42"></rect><text x="128" y="203">RY</text>
+            <line x1="280" y1="48" x2="280" y2="98"></line><circle cx="280" cy="48" r="8"></circle><circle cx="280" cy="98" r="17"></circle><line x1="385" y1="98" x2="385" y2="148"></line><circle cx="385" cy="98" r="8"></circle><circle cx="385" cy="148" r="17"></circle><line x1="490" y1="148" x2="490" y2="198"></line><circle cx="490" cy="148" r="8"></circle><circle cx="490" cy="198" r="17"></circle>
+            <rect x="595" y="26" width="58" height="42"></rect><text x="608" y="53">RZ</text><rect x="595" y="76" width="58" height="42"></rect><text x="608" y="103">RZ</text><rect x="595" y="126" width="58" height="42"></rect><text x="608" y="153">RZ</text><rect x="595" y="176" width="58" height="42"></rect><text x="608" y="203">RZ</text>
+            <rect x="740" y="26" width="68" height="42"></rect><text x="755" y="53">Z</text><rect x="740" y="76" width="68" height="42"></rect><text x="755" y="103">Z</text><rect x="740" y="126" width="68" height="42"></rect><text x="755" y="153">Z</text><rect x="740" y="176" width="68" height="42"></rect><text x="755" y="203">Z</text>
+          </g>
+          <text class="measurement-label" x="826" y="126">Pauli-Z</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section compact-section" id="results">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Dataset + Models 1–3 Results</p>
+        <h2>Compact internal test dashboard.</h2>
+      </div>
+      <div class="metric-grid reveal">
+        <div class="metric"><strong data-count="1055">0</strong><span>RGB patches</span></div>
+        <div class="metric"><strong data-count="543">0</strong><span>Normal</span></div>
+        <div class="metric"><strong data-count="512">0</strong><span>Ulcer</span></div>
+        <div class="metric"><strong>224×224</strong><span>Image size</span></div>
+        <div class="metric"><strong>70/15/15</strong><span>Stratified split</span></div>
+        <div class="metric"><strong>159</strong><span>Test set: 82 Normal, 77 Ulcer</span></div>
+      </div>
+      <div class="model-grid results-grid">
+        <article class="model-card reveal"><span class="tag">Model 1</span><h3>ResNet18 + VQC Hybrid Baseline</h3><div class="metric-bars" data-model="m1"></div><div class="confusion"><span>80</span><span>2</span><span>0</span><span>77</span></div></article>
+        <article class="model-card featured reveal"><span class="tag">Model 2</span><h3>ResNet50 Fusion Hybrid Enhanced Model</h3><div class="metric-bars" data-model="m2"></div><div class="confusion"><span>82</span><span>0</span><span>0</span><span>77</span></div><p class="caution">Best internal test performance on the current split, interpreted cautiously due to the small patch-level dataset.</p></article>
+        <article class="model-card reveal"><span class="tag">Model 3 Ideal</span><h3>QTL-style Ideal Simulation</h3><div class="mini-metrics"><span>Accuracy 0.5157</span><span>Precision 0.0000</span><span>Recall 0.0000</span><span>F1-score 0.0000</span><span>ROC-AUC 1.0000</span></div><div class="confusion"><span>82</span><span>0</span><span>77</span><span>0</span></div></article>
+        <article class="model-card reveal"><span class="tag">Model 3 Noise-Aware</span><h3>QTL-style Noise-Aware Simulation</h3><p class="noise-note">Noise: depolarizing + amplitude damping, p = 0.01</p><div class="mini-metrics"><span>Accuracy 0.9937</span><span>Precision 1.0000</span><span>Recall 0.9870</span><span>F1-score 0.9935</span><span>ROC-AUC 0.9998</span></div><div class="confusion"><span>82</span><span>0</span><span>1</span><span>76</span></div></article>
+      </div>
+    </section>
+
+    <section class="section insight-section compact-section" id="insight">
+      <div class="section-heading reveal">
+        <p class="eyebrow">AUC vs F1 Key Insight</p>
+        <h2>High ROC-AUC Alone Is Not Enough</h2>
+        <p class="section-kicker">Perfect separation ≠ reliable prediction</p>
+      </div>
+      <p class="bridge-statement reveal">Model 3 achieved ROC-AUC = 1.0000 under ideal simulation but F1-score = 0.0000. This shows that a model can rank samples well while failing under the selected classification threshold.</p>
+      <div class="insight-panels">
+        <article class="insight-panel warning reveal"><h3>Ideal Simulation</h3><canvas class="roc-canvas" width="420" height="220" data-roc="ideal" aria-label="Ideal ROC curve"></canvas><dl><div><dt>ROC-AUC</dt><dd>1.0000</dd></div><div><dt>F1-score</dt><dd>0.0000</dd></div><div><dt>Status</dt><dd>Not reliable at selected threshold</dd></div></dl></article>
+        <article class="insight-panel success reveal"><h3>Noise-Aware Simulation</h3><canvas class="roc-canvas" width="420" height="220" data-roc="noise" aria-label="Noise-aware ROC curve"></canvas><dl><div><dt>ROC-AUC</dt><dd>0.9998</dd></div><div><dt>F1-score</dt><dd>0.9935</dd></div><div><dt>Status</dt><dd>Recovered strong thresholded performance</dd></div></dl></article>
+      </div>
+    </section>
+
+    <section class="section gallery-section compact-section" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Project Gallery</p>
+        <h2>Visual artefacts and research outputs.</h2>
+      </div>
+      <div class="gallery-grid reveal" id="galleryGrid" aria-label="Project visual gallery"></div>
+    </section>
+
+    <section class="section compact-section" id="responsible">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Responsible Claims + Future Work</p>
+        <h2>Strong results, careful boundaries.</h2>
+      </div>
+      <div class="limits-grid reveal">
+        <article><h3>Responsible Claims</h3><p>Research prototype only. Not a clinical diagnostic tool. No clinical readiness claim. No real quantum hardware validation. No quantum advantage claim. No external validation yet.</p></article>
+        <article><h3>Future Work</h3><p>Larger external DFU datasets, patient-level validation, threshold calibration, selected real quantum hardware testing, alternative quantum circuit designs, and severity grading or segmentation.</p></article>
+      </div>
+    </section>
+
+    <section class="section contact-section compact-section" id="contact">
+      <div class="contact-card reveal">
+        <div class="institution-lockup footer-lockup" data-logo="assets/staffordshire-university-london-logo.png">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Staffordshire University London" width="238" height="70">
+          <span>Staffordshire University London</span>
+        </div>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Avishka Fernando</h2>
+          <p class="profile-line">Avishka Pramuditha Warnakulasuriya Fernando · Student ID: 24022401 · First Supervisor: Dr. Mahsa Zolfaghari · Second Supervisor: Dr. Khalil Saadat</p>
+          <p>Interactive research artefact for hybrid quantum-classical medical AI evaluation.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="mailto:w022401o@student.staffs.ac.uk">Email</a>
+          <a href="https://www.linkedin.com/in/avishka-pramuditha-warnakulasuriya-fernando-122b38282" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="institution-lockup footer-lockup" data-logo="assets/staffordshire-university-london-logo.png">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Staffordshire University London" width="238" height="70">
+        <span>Staffordshire University London</span>
+      </div>
+      <p><strong>Avishka Fernando</strong><br>Avishka Pramuditha Warnakulasuriya Fernando · Student ID: 24022401<br><a href="mailto:w022401o@student.staffs.ac.uk">w022401o@student.staffs.ac.uk</a><br><a href="https://www.linkedin.com/in/avishka-pramuditha-warnakulasuriya-fernando-122b38282" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/avishka-pramuditha-warnakulasuriya-fernando-122b38282</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Gallery preview">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close gallery preview">Close</button>
+    <img id="lightboxImage" alt="">
+    <p id="lightboxCaption"></p>
+  </dialog>
+
+  <dialog class="lab-modal" id="labModal" aria-labelledby="labModalTitle">
+    <div class="lab-modal-shell">
+      <div class="lab-modal-header">
+        <h2 id="labModalTitle">Quantum Medical AI Lab</h2>
+        <button class="lab-modal-close" id="closeLabView" type="button" aria-label="Close full lab view">Close</button>
+      </div>
+      <p class="lab-modal-subtitle">Simulator-Based Research Prototype</p>
+      <div class="lab-modal-content" id="labModalContent"></div>
+    </div>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
