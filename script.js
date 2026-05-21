@@ -300,7 +300,7 @@
     ["Pipeline", "End-to-end model workflow", ["assets/hybrid-pipeline.png"]],
     ["Models 1–3", "Model comparison and metrics", ["assets/models-1-to-3.png"]],
     ["AUC vs F1", "Key evaluation finding", ["assets/auc-vs-f1-insight.png"]],
-    ["A1 Banner", "Full project poster", ["assets/main-banner-poster.png"]]
+    ["Gradex Poster", "Full project poster", ["assets/main-banner-poster.png"]]
   ];
 
   function resolveImage(paths) {
