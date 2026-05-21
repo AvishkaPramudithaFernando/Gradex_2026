@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Hybrid Quantum-Classical Deep Learning for Diabetic Foot Ulcer Classification</title>
+  <desc id="desc">Dark navy research showcase social preview with red, blue, and gold scientific accents.</desc>
+  <defs>
+    <radialGradient id="g1" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#ff2f4f" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#07172d" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#07172d"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="78%" cy="34%" r="58%">
+      <stop offset="0%" stop-color="#1ec8ff" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#07172d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#07172d"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.08">
+    <path d="M0 120h1200M0 240h1200M0 360h1200M0 480h1200"/>
+    <path d="M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/>
+  </g>
+  <circle cx="900" cy="315" r="112" fill="none" stroke="#1ec8ff" stroke-width="5" opacity="0.75"/>
+  <circle cx="900" cy="315" r="165" fill="none" stroke="#ff2f4f" stroke-width="3" opacity="0.55"/>
+  <path d="M800 315h200M900 215v200" stroke="#d8b45b" stroke-width="4" opacity="0.8"/>
+  <text x="74" y="120" fill="#1ec8ff" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5">INTERACTIVE RESEARCH ARTEFACT</text>
+  <text x="74" y="214" fill="#f7fbff" font-family="Arial, sans-serif" font-size="58" font-weight="900">Hybrid Quantum-Classical</text>
+  <text x="74" y="285" fill="#f7fbff" font-family="Arial, sans-serif" font-size="58" font-weight="900">Deep Learning for</text>
+  <text x="74" y="356" fill="#f7fbff" font-family="Arial, sans-serif" font-size="58" font-weight="900">Diabetic Foot Ulcer</text>
+  <text x="74" y="427" fill="#f7fbff" font-family="Arial, sans-serif" font-size="58" font-weight="900">Classification</text>
+  <text x="78" y="512" fill="#b9c8da" font-family="Times New Roman, serif" font-size="30">Research prototype · Simulator-based evaluation · Multi-metric reliability</text>
+  <text x="78" y="565" fill="#d8b45b" font-family="Arial, sans-serif" font-size="24" font-weight="700">Avishka Fernando · Staffordshire University London</text>
+</svg>
